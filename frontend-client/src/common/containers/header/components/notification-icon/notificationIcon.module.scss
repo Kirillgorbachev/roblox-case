@@ -1,0 +1,50 @@
+@import "../../../../../styles/colors";
+
+.notification {
+    background: transparent;
+    margin-right: 8px;
+    width: 3rem;
+    height: 3rem;
+    padding: 0 12px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+justify-content: center;
+
+
+    &_icon {
+        scale: 120%;
+
+        & path {
+            fill: $color-5;
+        }
+    }
+
+    background: $color-3;
+    transition: all 0.3s ease-in-out;
+  
+    &:hover {
+      background-color: $color-6;
+    }
+}
+
+@media (max-width: 916px) {
+    .notification {
+        &_icon {
+            width: 16px;
+            height: 16px;
+        }
+    }
+}
+
+@media (max-width: 416px) {
+    .notification {
+        margin-right: 4px;
+        height: 38px;
+        padding: 0 11px;
+        &_icon {
+            width: 14px;
+            height: 14px;
+        }
+    }
+}

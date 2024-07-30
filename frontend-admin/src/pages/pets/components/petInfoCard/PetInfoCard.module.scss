@@ -1,0 +1,137 @@
+@import '../../../../styles/colors';
+
+.main{
+  padding: 1rem;
+  border-radius: 1rem;
+  background-color: $color-2;
+  width: 22rem;
+  height: 37rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.imageWrapper{
+  margin-top: 1rem;
+  background-color: $color-3;
+  border-radius: 1rem;
+  padding: 2rem;
+  width: 16rem;
+  height: 16rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.image{
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  overflow: hidden;
+  pointer-events: none;
+  user-select: none;
+}
+
+.rarity{
+  position: absolute;
+  margin-top: 19.2rem;
+  border-top-right-radius: 0.5rem;
+  border-top-left-radius: 0.5rem;
+  width: 8rem;
+  height: 0.8rem;
+
+  //border-top: 0.1em solid $color-4; /* Верхняя граница */
+  //border-left: 0.1em solid $color-4; /* Левая граница */
+  //border-right: 0.1em solid $color-4; /* Правая граница */
+
+  &_common{
+    background-color: $rarity-common;
+  }
+
+  &_uncommon{
+    background-color: $rarity-uncommon;
+  }
+
+  &_rare{
+    background-color: $rarity-rare;
+  }
+
+  &_ultraRare{
+    background-color: $rarity-ultra-rare;
+  }
+
+  &_legendary{
+    background-color: $rarity-legendary;
+  }
+}
+
+.propertyWrapper{
+  margin-top: 1rem;
+  width: 18rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.propertyName{
+  font-weight: bold;
+
+}
+
+
+.property{
+
+}
+
+.buttonWrapper{
+  margin-top: 6rem;
+  width: 18rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.editButton{
+  font-size: 1em;
+  outline: none;
+  background: $color-3;
+  color: $neutral-orange;
+  border: none;
+  padding: 0.5rem 1rem;
+  height: 2rem;
+  border-radius: 0.7rem;
+  font-family: inherit;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: all .3s ease;
+
+  &:hover {
+    opacity: 80%;
+  }
+
+  margin-right: 3rem;
+}
+
+.deleteButton{
+  font-size: 1em;
+  outline: none;
+  background: $color-3;
+  color: $wrong-red;
+  border: none;
+  padding: 0.5rem 1rem;
+  height: 2rem;
+  border-radius: 0.7rem;
+  font-family: inherit;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: all .3s ease;
+
+  &:hover {
+    opacity: 80%;
+  }
+}

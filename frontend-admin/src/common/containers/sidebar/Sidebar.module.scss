@@ -1,0 +1,117 @@
+@import '../../../styles/colors';
+
+@font-face {
+    font-family: 'Fugaz';
+    src: url(../../../assets/fonts/FugazOne.ttf);
+}
+
+.logotype {
+    font-family: 'Fugaz', sans-serif;
+    text-transform: uppercase;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    padding-left: 28px;
+    position: relative;
+    width: 10em;
+
+    margin-top: 1em;
+    margin-left: 1em;
+    
+    &::before {
+        position: absolute;
+        left: 0;
+        content: '';
+        width: 36px;
+        height: 36px;
+        background-image: url('../../../assets/images/logotype.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    margin-bottom: 24px;
+}
+
+.sidebar{
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+    width: fit-content;
+    background-color: $color-2;
+}
+
+.profileInfo{
+    margin-left: 1em;
+    display: grid;
+    grid-template-columns: 4em 10em;
+    grid-template-rows: 2em 2em;
+    grid-template-areas:
+    "avatar nickname"
+    "avatar role";
+
+    &_avatar{
+        grid-area: avatar;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+
+        font-size: 1.6em;
+        font-weight: 700;
+        color:$color-4;
+
+        width:2.5em;
+        height:2.5em;
+
+        line-height:2.5em;
+        text-align:center;
+        border-radius: 0.8em;
+        background-color: $color-3;
+    }
+
+    &_nickname{
+        grid-area: nickname;
+        margin-left: 1em;
+        font-size: 1.2em;
+        align-self: center;
+    }
+
+    &_role{
+        grid-area: role;
+        font-size: 1.2em;
+        margin-left: 1em;
+        color: $color-4;
+        align-self: center;
+    }
+}
+
+.links{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 1em;
+
+    &_header{
+        margin-left: 1em;
+        margin-top: 0.5em;
+        font-size: 1.5em;
+        font-weight: bold;
+    }
+
+    &_item{
+        font-size: 1.2rem;
+        padding-top: 0.4em;
+        padding-bottom: 0.4em;
+        padding-left: 2.2em;
+        text-decoration: none;
+        color: inherit;
+
+        &:hover{
+            background-color: $color-1;
+        }
+
+        &_active{
+            background-color: $color-1;
+        }
+    }
+}

@@ -1,0 +1,39 @@
+@import "../../../../../styles/colors";
+
+.profile {
+    width: 3rem;
+    height: 3rem;
+    background-color: $color-3;
+    border-radius: 8px;
+    margin-left: 0.3rem;
+    margin-right: 0.3rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &_icon {
+        scale: 120%;
+    }
+    transition: all 0.3s ease-in-out;
+    &:hover {
+        background-color: $color-6;
+    }
+
+}
+
+@media (max-width: 916px) {
+    .profile {
+        width: 46px;
+        height: 46px;
+        margin-left: 14px;
+    }
+}
+
+@media (max-width: 416px) {
+    .profile {
+        width: 40px;
+        height: 40px;
+        margin-left: 8px;
+    }
+}
